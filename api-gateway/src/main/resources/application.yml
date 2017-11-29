@@ -1,0 +1,17 @@
+zuul:
+    routes:
+        reservas:
+            path: /reservations/**
+            serviceId: MICROSERVICE-RESERVATIO
+            stripPrefix: false
+        clientes:
+            path: /clients/**
+            serviceId: MICROSERVICE-CLIENT
+            stripPrefix: false
+eureka:
+    client:
+        registerWithEureka: false
+        serviceUrl:
+            defaultZone: http://localhost:1111/eureka
+server:
+    port: 8080
